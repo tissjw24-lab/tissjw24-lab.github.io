@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>울산공업고등학교 도제반 관리 시스템</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Chart.js for graphs -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-content">
+      <div class="logo">
+        <div class="logo-icon">🎓</div>
+        <div class="logo-text">
+          <h1>울산공업고등학교</h1>
+          <p>일학습병행제(도제반) 관리 시스템</p>
+        </div>
+      </div>
+
+      <nav class="nav" id="mainNav">
+        <button class="nav-btn active" data-page="intro">도제 소개</button>
+        <button class="nav-btn" data-page="home">홈</button>
+        <button class="nav-btn" data-page="classes">학급 현황</button>
+        <button class="nav-btn" data-page="employment">취업 정보</button>
+        <button class="nav-btn" data-page="certificates">자격증</button>
+        <button class="nav-btn" data-page="events">연간 행사</button>
+        <button class="nav-btn" data-page="calendar">월별 캘린더</button>
+        <button class="nav-btn" data-page="teachers">교사 소개</button>
+        <button class="nav-btn" data-page="teacher-log">교사 관리</button>
+        <button class="nav-btn" data-page="notices">공지사항</button>
+        <button class="nav-btn" data-page="correspondence">가정통신문</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main">
+    <div class="container" id="mainContent">
+      <!-- Content will be dynamically loaded here -->
+    </div>
+  </main>
+
+  <!-- Student Profile Modal -->
+  <div class="modal" id="studentModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>
+          <h2 id="modalStudentName">학생 상세 정보</h2>
+        </div>
+        <button class="modal-close" onclick="closeStudentModal()">×</button>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <!-- Student details will be loaded here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="components.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
